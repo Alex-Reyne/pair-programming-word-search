@@ -36,10 +36,10 @@ describe("#wordSearch()", function() {
     assert.isTrue(result);
   });
 
-  it("should return true if the word is present", function() {
+  it("should return true if the word is present backwards", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
-      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['D', 'L', 'E', 'F', 'N', 'I', 'E', 'S'],
       ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['H', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
       ['W', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
@@ -47,6 +47,21 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'SEINFELD')
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present vertical", function() {
+    const result = wordSearch([
+      ['A', 'S', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['D', 'E', 'E', 'F', 'N', 'I', 'E', 'S'],
+      ['Y', 'I', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'N', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'F', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'E', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'L', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
     ], 'SEINFELD')
 
     assert.isTrue(result);
